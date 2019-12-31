@@ -9,7 +9,9 @@
 
 async function getFilesInDirectory(path = "./") {
   // Get files within the current directory and add a path key to the file objects
-  const files = (await fs.readdir(path, { withFileTypes: true })).filter(folder => !folder.isDirectory()).map(folder => ({ ...folder, path: path + folder.name }));
+  const files = (await fs.readdir(path, { withFileTypes: true }))
+    .filter(folder => !folder.isDirectory())
+    .map(folder => ({ ...folder, path: path + folder.name }));
 	
   // Get folders in within the current directory
   const folders = (await fs.readdir(path, { withFileTypes: true })).filter(folder => folder.isDirectory());
