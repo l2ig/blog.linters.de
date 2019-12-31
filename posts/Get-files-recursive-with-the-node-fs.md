@@ -1,4 +1,4 @@
-<h1>How to get files recursive with the Node.js FS</h1>
+<h1>How to get files recursive with the Node.js File System</h1>
 
 <h2>fs Promises API</h2>
 <p>
