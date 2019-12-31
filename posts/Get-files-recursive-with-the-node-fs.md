@@ -10,19 +10,19 @@
 <h2>The reason you're here</h2>
 <code>async function getFilesInDirectory(path = "./") {
   // Get files within the current directory and add a path key to the file objects
-	const files = (await fs.readdir(path, { withFileTypes: true })).filter(folder => !folder.isDirectory()).map(folder => ({ ...folder, path: path + folder.name }));
+  const files = (await fs.readdir(path, { withFileTypes: true })).filter(folder => !folder.isDirectory()).map(folder => ({ ...folder, path: path + folder.name }));
 	
   // Get folders in within the current directory
   const folders = (await fs.readdir(path, { withFileTypes: true })).filter(folder => folder.isDirectory());
 
-	for (const folder of folders)
+  for (const folder of folders)
     /*
-      Add the found files to the <code>files</code> variable by calling the
+      Add the found files to the files variable by calling the
       current function itself
     */
-		files.push(...await getFilesInDirectory(`${path}${folder.name}/`));
+    files.push(...await getFilesInDirectory(`${path}${folder.name}/`));
 
-	return files;
+  return files;
 }</code>
 
 <h2>Example output</h2>
