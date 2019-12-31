@@ -1,5 +1,3 @@
-<h1>How to get files recursive with the Node.js File System</h1>
-
 <h2>The File System Promises API</h2>
 <p>
   In the following code snippet, I'll be using the fs Promises API.<br>
