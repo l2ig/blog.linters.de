@@ -1,14 +1,15 @@
 <h1>How to get files recursive with the Node.js File System</h1>
 
-<h2>The fs Promises API</h2>
+<h2>The File System Promises API</h2>
 <p>
   In the following code snippet, I'll be using the fs Promises API.<br>
   It's available to you if you're rocking at least Node.js v10.
 </p>
-<code>const { promises: fs } = require("fs");</code>
 
 <h2>The reason you're here</h2>
-<code>async function getFilesInDirectory(path = "./") {
+<code>const { promises: fs } = require("fs");
+
+async function getFilesInDirectory(path = "./") {
   // Get files within the current directory and add a path key to the file objects
   const files = (await fs.readdir(path, { withFileTypes: true })).filter(folder => !folder.isDirectory()).map(folder => ({ ...folder, path: path + folder.name }));
 	
