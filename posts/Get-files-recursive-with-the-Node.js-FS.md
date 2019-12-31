@@ -18,7 +18,7 @@ async function getFilesInDirectory(path = "./") {
 
   for (const folder of folders)
     /*
-      Add the found files to the files variable by calling the
+      Add the found files within the subdirectory to the files array by calling the
       current function itself
     */
     files.push(...await getFilesInDirectory(`${path}${folder.name}/`));
