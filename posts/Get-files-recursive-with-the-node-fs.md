@@ -1,6 +1,6 @@
 <h1>How to get files recursive with the Node.js File System</h1>
 
-<h2>fs Promises API</h2>
+<h2>The fs Promises API</h2>
 <p>
   In the following code snippet, I'll be using the fs Promises API.<br>
   It's available to you if you're rocking at least Node.js v10.
