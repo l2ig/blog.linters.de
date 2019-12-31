@@ -7,7 +7,7 @@
 <h2>The reason you're here</h2>
 <code>const { promises: fs } = require("fs");
 
-async function getFilesInDirectory(path = "./") {
+async function getFiles(path = "./") {
   // Get files within the current directory and add a path key to the file objects
   const files = (await fs.readdir(path, { withFileTypes: true }))
     .filter(folder => !folder.isDirectory())
@@ -21,7 +21,7 @@ async function getFilesInDirectory(path = "./") {
       Add the found files within the subdirectory to the files array by calling the
       current function itself
     */
-    files.push(...await getFilesInDirectory(`${path}${folder.name}/`));
+    files.push(...await getFiles(`${path}${folder.name}/`));
 
   return files;
 }</code>
