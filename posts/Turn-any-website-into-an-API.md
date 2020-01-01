@@ -4,7 +4,7 @@
 <h2>Let's try Puppeteer out</h2>
 <p>
   In order to use Puppeteer, we have to install Puppeteer first. We can do this by typing 
-  <code>npm i puppeteer</code>.
+  <i>npm i puppeteer</i>.
 </p>
 <p>Let's try a real-world example now and get the featured article on dev.to:</p>
 
