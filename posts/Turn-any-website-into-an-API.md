@@ -12,8 +12,8 @@
 <code>const puppeteer = require('puppeteer');
 
 (async () => {
-  const browser = await puppeteer.launch();
-  const page = await browser.newPage();
+    const browser = await puppeteer.launch();
+    const page = await browser.newPage();
 })();</code>
 
 <h3>Now we can browse to dev.to</h3>
